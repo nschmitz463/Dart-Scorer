@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Scorer - Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <a href="index.html" class="btn back">← Zurück</a>
+        <div class="controls">
+            <button id="saveGame" class="btn">💾 Speichern</button>
+            <button id="newGame" class="btn">🔄 Neues Spiel</button>
+        </div>
+    </div>
+
+    <!-- SPIELER SCORES -->
+    <div id="playerScores" class="player-scores"></div>
+
+    <!-- DART EINGABE -->
+    <div class="dartboard-input">
+
+        <h3 id="currentPlayerName">Spieler ist dran</h3>
+
+        <!-- CHECKOUT HILFE -->
+        <div id="checkoutHelp" class="checkout-hint">
+            Checkout: —
+        </div>
+
+        <!-- STATUS -->
+        <div class="dart-status">
+            <span id="multiplierStatus">Single</span> |
+            <span id="roundTotal">0 Punkte (0/3)</span>
+        </div>
+
+        <!-- DARTBOARD -->
+        <div class="dartboard-grid">
+
+            <!-- ZAHLEN -->
+            <button class="dart-btn single" data-score="0">0</button>
+            <button class="dart-btn single" data-score="1">1</button>
+            <button class="dart-btn single" data-score="2">2</button>
+            <button class="dart-btn single" data-score="3">3</button>
+            <button class="dart-btn single" data-score="4">4</button>
+            <button class="dart-btn single" data-score="5">5</button>
+            <button class="dart-btn single" data-score="6">6</button>
+            <button class="dart-btn single" data-score="7">7</button>
+            <button class="dart-btn single" data-score="8">8</button>
+            <button class="dart-btn single" data-score="9">9</button>
+            <button class="dart-btn single" data-score="10">10</button>
+            <button class="dart-btn single" data-score="11">11</button>
+            <button class="dart-btn single" data-score="12">12</button>
+            <button class="dart-btn single" data-score="13">13</button>
+            <button class="dart-btn single" data-score="14">14</button>
+            <button class="dart-btn single" data-score="15">15</button>
+            <button class="dart-btn single" data-score="16">16</button>
+            <button class="dart-btn single" data-score="17">17</button>
+            <button class="dart-btn single" data-score="18">18</button>
+            <button class="dart-btn single" data-score="19">19</button>
+            <button class="dart-btn single" data-score="20">20</button>
+            <button class="dart-btn single" data-score="25">25</button>
+
+            <!-- MULTIPLIKATOREN -->
+            <button id="doubleBtn" class="dart-btn double">2×</button>
+            <button id="tripleBtn" class="dart-btn triple">3×</button>
+        </div>
+
+        <!-- AKTIONEN -->
+        <div class="dart-actions">
+            <button class="btn" id="undoBtn">⏪ Undo letzter Dart</button>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div id="statsDisplay"></div>
+    </div>
+
+</div>
+
+<script src="scoreboard.js"></script>
+</body>
+</html>
